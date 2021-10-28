@@ -8,7 +8,7 @@
 }
 
 /* Захований заголовок  */
-.visually-hidden {
+.visually-hidden-head {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -35,15 +35,6 @@ img {
   height: auto;
 }
 
-body {
-  background-color: var(--bgc-main);
-  color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
 .list {
   list-style: none;
   margin: 0;
@@ -54,8 +45,13 @@ body {
   text-decoration: none;
 }
 
-.current {
-  color: var(--hoover-color);
+body {
+  background-color: var(--bgc-main);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .container {
@@ -87,6 +83,10 @@ body {
 .header-nav {
   display: flex;
   margin-left: 93px;
+}
+
+.current {
+  color: var(--hoover-color);
 }
 
 .header-title {
@@ -209,6 +209,27 @@ body {
 
 /* Hero */
 
+.btn {
+  min-width: 200px;
+
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--hoover-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover,
+.btn:focus {
+  color: #188ce8;
+}
+
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -242,26 +263,7 @@ body {
   color: #ffffff;
 }
 
-.btn {
-  min-width: 200px;
-
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  padding: 10px 32px;
-  border: none;
-  border-radius: 4px;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: var(--hoover-color);
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn:hover,
-.btn:focus {
-  color: #188ce8;
-}
+/* Modal */
 
 .backdrop {
   position: fixed;
@@ -430,14 +432,14 @@ body {
 
 /* Основное */
 
-.head {
+.head-main-factors {
   font-weight: 700;
   font-size: inherit;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.title {
+.title-main-factors {
   color: var(--secondary-text-color);
 }
 
@@ -487,11 +489,11 @@ body {
   height: 70px;
 }
 
-.section-to-do {
+.job-pictures {
   padding-top: 0;
 }
 
-.head-main {
+.head-job-pictures {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -500,7 +502,7 @@ body {
   text-align: center;
 }
 
-.job-pictures {
+.job-pictures-list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -538,11 +540,11 @@ body {
 
 /* Команда */
 
-.team {
+.our-team {
   background-color: var(--bgc-team);
 }
 
-.our-team {
+.our-team-list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -561,7 +563,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-head {
+.our-team-head {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.36;
@@ -858,11 +860,11 @@ body {
   padding-bottom: 94px;
 }
 
-.main-buttons {
+.portfolio__set-buttons {
   text-align: center;
 }
 
-.btn-portfolio {
+.portfolio__button {
   min-width: 73px;
   margin-bottom: 50px;
   margin-right: 8px;
@@ -881,23 +883,20 @@ body {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-portfolio:hover,
-.btn-portfolio:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
   background-color: var(--hoover-color);
   color: #ffffff;
 }
 
 /* Main portfolio */
 
-.exams-of-portfolio {
+.portfolio__exams {
   display: flex;
   flex-wrap: wrap;
-  /* margin-right: -30px;
-  margin-bottom: -30px; */
-  /* background-color: aqua; */
 }
 
-.portfolio-picture {
+.card {
   overflow: hidden;
 
   margin-right: 30px;
@@ -911,12 +910,12 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.picture-hover {
+.card__container {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-picture-effect {
+.card__effect-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -933,35 +932,35 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.portfolio-picture:hover .portfolio-picture-effect {
+.card:hover .card__effect-container {
   transform: translateY(0);
 }
 
-.portfolio-picture:hover,
-.portfolio-picture:focus {
+.card:hover,
+.card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-picture-effect-text {
+.card__effect-text {
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
 }
 
-.portfolio-picture:nth-child(3n) {
+.card:nth-child(3n) {
   margin-right: 0px;
 }
 
-.portfolio-picture:nth-last-child(-n + 3) {
+.card:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
 
-.div-tekst {
+.card__text-container {
   padding: 20px 24px;
 }
 
-.head-portfolio {
+.card__head {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -971,7 +970,7 @@ body {
   color: inherit;
 }
 
-.head-portfolio-description {
+.card__description {
   font-size: 16px;
   line-height: 1.87;
   color: var(--secondary-text-color);
